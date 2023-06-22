@@ -2,26 +2,30 @@
 <html lang="en">
 <head>
     <script>
-        // send UX info to datadog for effective tracking
-        (function(h,o,u,n,d) {
-            h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
-            d=o.createElement(u);d.async=1;d.src=n
-            n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
-        })
-        (window,document,'script','https://www.datadoghq-browser-agent.com/datadog-rum.js','DD_RUM')
-        DD_RUM.onReady(function() {
-            DD_RUM.init({
-                clientToken: 'pube49a6db75b0aa975256173adc9a9b7fb',
-                applicationId: 'c3f64d08-06f2-4cf9-bc67-f1ed8b057845',
-                site: 'datadoghq.com',
-                service: 'personifyui',
-                env: 'produi',
-                // Specify a version number to identify the deployed version of your application in Datadog
-                // version: '1.0.0',
-                sampleRate: 100,
-                trackInteractions: true,
-            })
-        })
+      (function(h,o,u,n,d) {
+        h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+        d=o.createElement(u);d.async=1;d.src=n
+        n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+      })(window,document,'script','https://www.datadoghq-browser-agent.com/us1/v4/datadog-rum.js','DD_RUM')
+      window.DD_RUM.onReady(function() {
+        window.DD_RUM.init({
+          clientToken: 'pub12ee9b647879a8ba48cb052f015ccfba',
+          applicationId: 'ba33d5bd-401f-4286-b30e-67764fc43a81',
+          site: 'datadoghq.com',
+          service: 'cloud-sampling-test',
+          env: 'prod',
+          // Specify a version number to identify the deployed version of your application in Datadog 
+          // version: '1.0.0', 
+          sessionReplaySampleRate: 100,
+          trackUserInteractions: true,
+          trackResources: true,
+          trackLongTasks: true,
+          defaultPrivacyLevel: 'mask-user-input',
+        });
+    
+        window.DD_RUM.startSessionReplayRecording();
+      })
+    </script>
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
