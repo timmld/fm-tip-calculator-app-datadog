@@ -6,15 +6,15 @@
         h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
         d=o.createElement(u);d.async=1;d.src=n
         n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
-      })(window,document,'script','https://www.datadoghq-browser-agent.com/us1/v4/datadog-rum.js','DD_RUM')
+      })(window,document,'script','https://www.datadoghq-browser-agent.com/eu1/v5/datadog-rum.js','DD_RUM')
       window.DD_RUM.onReady(function() {
         window.DD_RUM.init({
-          clientToken: 'pub12ee9b647879a8ba48cb052f015ccfba',
-          applicationId: 'ba33d5bd-401f-4286-b30e-67764fc43a81',
+          clientToken: 'pub40971f008ea9ae67a5609ee505eadffd',
+          applicationId: 'ca8f703e-3abe-4cb4-b1fe-9ac9cdd48465',
           site: 'datadoghq.com',
-          service: 'cloud-sampling-test',
+          service: 'test',
           env: 'prod',
-          version: '1.1', 
+          version: '1.0.0', 
           sessionReplaySampleRate: 100,
           trackUserInteractions: true,
           trackResources: true,
